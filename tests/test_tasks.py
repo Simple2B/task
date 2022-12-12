@@ -8,12 +8,10 @@ def test_task_registration():
 
     @task
     def foo():
-        """I'm foo"""
         print("foo")
 
     @task
     def bar():
-        """I'm bar"""
         print("bar")
 
     assert TASK_MAP
