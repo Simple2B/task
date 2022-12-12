@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "s2b_task"
+version = "0.0.7"
+description = "Python tasks manager for python3.11"
+authors = ["nixissmtp <nixissmtp@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.2.0"
+pydantic = "^1.10.2"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^22.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+task='s2b_task.task_executor:do_task'
