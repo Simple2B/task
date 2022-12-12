@@ -1,8 +1,6 @@
 # Test python package and deploy it on PyPI
 
-name: Deploy
-
-on: [workflow_dispatch]
+name: Test/Build/Deploy
 
 jobs:
   test:
@@ -27,7 +25,7 @@ jobs:
       - name: run pytest
         run: |
           poetry run pytest
-  build:
+  build-deploy:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
     runs-on: self-hosted
     needs:
